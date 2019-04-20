@@ -9,12 +9,26 @@ class Info:
 
     def __init__(self, filename=None):
         self.filename = filename
+        self.size = 0
+        self.data_type = None
+        self.source = filename
         if filename is None:
             self.data = None
         elif filename.endswith('txt'):
             self.data = self.txt_read(filename)
+            self.data_type = 'txt'
         elif filename.endswith('csv'):
             self.data = self.csv_read(filename)
+            self.data_type = 'csv'
+
+    def get_data_type(self):
+        return self.data_type
+
+    def get_size(self):
+        return self.size
+
+    def get_source(self):
+        return self.source
 
     def txt_read(self, filename):
         """
@@ -29,8 +43,10 @@ class Info:
             webpage.readline()
             for b in webpage:
                 line = b.strip()
+                self.size += 1
                 line = line.decode("utf-8")
                 DATA.append(line)
+
                 k += 1
                 if k == 2000:
                     break
@@ -51,6 +67,7 @@ class Info:
                 newrow = []
                 for el in row:
                     newrow.append(el.lower())
+                self.size += 1
                 DATA.append(newrow[3:6] + newrow[-2:])
 
         return DATA
@@ -80,12 +97,18 @@ class Info:
                         else:
                             pass
             line = ",".join(line)
-            # print(line)
             DATA.append(line)
 
         newInfo = Info()
+        newInfo.size = self.get_size() + other.get_size()
         newInfo.data = DATA
+        newInfo.data_type = 'combined {} and {}'.format(self.get_data_type(), other.get_data_type())
+        newInfo.source = "{} data + {} data".format(self.get_data_type(), other.get_data_type())
         return newInfo
+
+    def __str__(self):
+        s = "Contains {} data\nSize: {} lines\nsource: {}".format(self.get_data_type(), self.get_size(), self.get_source())
+        return s
 
 
 if __name__ == "__main__":
@@ -96,8 +119,8 @@ if __name__ == "__main__":
     data = txt_data + csv_data
 
     # print(data)
-    f = open('data_new.txt', 'w')
-    for i in data.data:
-        # print(i)
-        f.write(i)
-        f.write("\n")
+    # f = open('data_new.txt', 'w')
+    # for i in data.data:
+    #     # print(i)
+    #     f.write(i)
+    #     f.write("\n")
