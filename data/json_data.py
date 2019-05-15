@@ -23,19 +23,25 @@ def write_data(filename, data):
         json.dump(data, file)
 
 
-data_gen = read_data('data.txt')
+data_gen = read_data('../data/data.txt')
 
 DATA = {
     'info': []
 }
 
-
-
-
-for i in range(500):
+for i in range(200):
     DATA['info'].append(next(data_gen))
-    # print("SDSS")
 
+# DATA['info'].sort(key=lambda x: x['date'])
+# print(DATA)
 write_data('newdata.json', DATA)
+
+FIRST_DAY = DATA['info'][0]['date'][3:5]
+LAST_DAY = DATA['info'][-1]['date'][3:5]
+DURATION = str(int(LAST_DAY) - int(FIRST_DAY))
+# print(FIRST_DAY)
+# print(LAST_DAY)
+
+# print(DURATION)
 
 

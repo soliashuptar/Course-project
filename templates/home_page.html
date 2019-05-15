@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/vendor/assets/css/style.css">
+<style>
+</style>
+</head>
+<body>
+
+<div class="bg-image img1"></div>
+<div class="bg-image img2"></div>
+<div class="bg-image img3"></div>
+<div class="bg-image img4"></div>
+<div class="bg-image img5"></div>
+<div class="bg-image img6"></div>
+
+<div class="bg-text">New York Map</div>
+<!--<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>-->
+<!--<button class ="btn" formaction="/uptodatemap" formmethod="post">Generate map with up-to-date data</button>-->
+<!--<button class ="btn_2" formaction="/generatedmap" formmethod="post">Generate map with last refreshed data</button>-->
+<form action = "/uptodatemap" method="post">
+<button class="btn" id="button_uptodate">Generate map with up-to-date data</button>
+     </form>
+<!--<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>-->
+<div class="windows8">
+	<div class="wBall" id="wBall_1">
+		<div class="wInnerBall"></div>
+	</div>
+	<div class="wBall" id="wBall_2">
+		<div class="wInnerBall"></div>
+	</div>
+	<div class="wBall" id="wBall_3">
+		<div class="wInnerBall"></div>
+	</div>
+	<div class="wBall" id="wBall_4">
+		<div class="wInnerBall"></div>
+	</div>
+	<div class="wBall" id="wBall_5">
+		<div class="wInnerBall"></div>
+	</div>
+</div>
+<form action="/generatedmap" method="post">
+<button class="btn_2">Generate map with last refreshed data</button>
+     </form>
+
+<script src="/vendor/assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-from map.unchanged import *
+from unchanged import *
 
 
 class Circle:

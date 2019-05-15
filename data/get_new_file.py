@@ -1,6 +1,6 @@
 from urllib.request import urlopen  # for Python 3: from urllib.request import urlopen
 from bs4 import BeautifulSoup
-from unchanged_data import URL, START_STR
+from data.unchanged_data import URL, START_STR
 
 
 def get_last():
