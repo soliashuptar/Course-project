@@ -1,77 +1,69 @@
 import folium
-import json
-
 from folium import plugins
-
-from radius import Circle
-
 import sys
 sys.path.append("..")
 
-from data.points_feat import features, points
-# import data.json_data
-from data import json_data
+from data import points_feat
+from data import pollution
 
-folium_map = folium.Map(location=[40.738, -73.98],
-                        zoom_start=13,
-                        tiles="CartoDB dark_matter")
-fg_hc = folium.FeatureGroup(name="Stations")
-with open("../data/newdata.json") as file:
-    data = json.load(file)
-    for line in data['info']:
-        print("j")
-        # print(line['coords'], line['station'])
-        stat = line['station']
-        coords = line['coords']
-        entr = line['entrances']
-        exits = line['exits']
-        circle = Circle(coords, entr, exits)
-        radius = circle.count_radius()
-        if radius > 50:
-            color = '#07eb96' #green
-        elif radius < 30:
-            color = '#0abde3' #blue
-        elif radius < 50:
-            color = '#f04822' #orange
-        popup = "Station: {}<br> Entrances: {}".format(stat, abs(entr - exits))
-        fg_hc.add_child(folium.CircleMarker(location=line['coords'], radius=radius, popup=popup, color=color, fill=True))
-
-        # fg_hc.add_child(folium.CircleMarker(location=line['coords'], radius=525724, popup=line['station'], color='red'))
-        # marker.add_to(folium_map)
-        # print(line['station'], line['coords'])
-# folium_map.add_child(fg_hc)
-
-minimap = plugins.MiniMap()
-folium_map.add_child(minimap)
-
-plugins.Fullscreen(
-    position='topright',
-    title='Expand me',
-    title_cancel='Exit me',
-    force_separate_button=True
-).add_to(folium_map)
+main_path = '../data/newdata.json'
+flask_path = '../CourseProject/data/newdata.json'
 
 
-plugins.TimestampedGeoJson(
-        {
-            'type': 'FeatureCollection',
-            'features': features
-        }
-        , period='PT4H'
-        , add_last_point=True
-        # , auto_play=True
-        # , loop=True
-        # , max_speed=0.5
-        # , loop_button=True
-        # , date_options='YYYY/MM//DD'
-        # , time_slider_drag_update=True,
-        # duration='P{}D'.format(json_data.DURATION)
+def create_map():
+    """
+    Function creates a map and saves it to templates folder
+    :return:
+    """
+    points = points_feat.create_points(flask_path)
+    FEATURES = points['features']
+    points_COORDINATES = points['coordinates']
+    DEF_TIME = points['set-time']
+
+    folium_map = folium.Map(location=[40.738, -73.98],
+                            zoom_start=12,
+                            tiles="CartoDB dark_matter")
+
+    # MiniMap plugin
+    minimap = plugins.MiniMap()
+    folium_map.add_child(minimap)
+
+    # Fullscreen plugin
+    plugins.Fullscreen(
+        position='topright',
+        title='Expand me',
+        title_cancel='Exit me',
+        force_separate_button=True
     ).add_to(folium_map)
 
-folium_map.add_child(folium.LayerControl())
+    # Timestamp plugin
+    plugins.TimestampedGeoJson(
+        {
+            'type': 'FeatureCollection',
+            'features': FEATURES,
 
-# heatmap = plugins.HeatMap(data=[[40.738, -73.98], [40.641362, -74.017881]])
-# folium_map.add_child(heatmap)
+        }
+        , period='PT4H'
+        , add_last_point= True
+        , duration = 'PT1M'
+    ).add_to(folium_map)
 
-print('> Done.')
-folium_map.save("../templates/my_map.html")
+    coordinates = []
+    for c in points_COORDINATES:
+        newlst = [c[1], c[0]]
+        aqi = pollution.get_air_data(newlst, DEF_TIME)[0] / 2.5
+        newlst.append(aqi)
+        coordinates.append(newlst)
+
+    heat_map = plugins.HeatMap(coordinates, radius=50)
+    heat_map.layer_name = 'Air Quality'
+    folium_map.add_child(heat_map)
+
+    folium_map.add_child(folium.LayerControl())
+
+    print('> Done.')
+    folium_map.save("../CourseProject/templates/my_map.html")
+
+
+if __name__ == "__main__":
+    create_map()

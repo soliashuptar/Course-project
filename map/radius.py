@@ -1,18 +1,24 @@
-import sys
-
-sys.path.append("..")
-
-
 from map.unchanged import *
 
 
 class Circle:
+    """Class for representing a circle(radius counter)"""
     def __init__(self, coords, entrances=0, exits=0):
+        """
+        Initializing parameters
+        :param coords: list
+        :param entrances: int
+        :param exits: int
+        """
         self.coords = coords
         self.entrances = entrances
         self.exits = exits
 
     def get_district(self):
+        """
+        Method for getting  an area of a district by coordinates
+        :return: float
+        """
         if BRONX[0][0] <= self.coords[0] <= BRONX[1][0] and BRONX[0][1] <= self.coords[1] <= BRONX[1][1]:
             return BRONX_AREA
 
@@ -27,19 +33,28 @@ class Circle:
         else:
             return BRONX_AREA
 
-    def abs_of_people(self):
+    def abs_ofpeople(self):
+        """
+        Method for counting absolute value of people in the area(station)
+        :return: int
+        """
         return abs(self.entrances - self.exits)
 
     def count_radius(self):
-        for_one_km = int(self.abs_of_people() // self.get_district())
+        """
+        Method fot counting an appropriate radius for a circle on a map based on amount of people
+        :return: int
+        """
+        for_one_km = int(self.abs_ofpeople() // self.get_district())
         coef = 10 ** (-len(str(for_one_km)) + 1)
         return int(for_one_km * coef) * 10
 
 
 if __name__ == "__main__":
-    circ = Circle([40.759901, -73.984139], 6041196, 37111525)
-    print(circ.get_district())
-    # print(circ.area)
-    print(circ.abs_of_people())
-    print(circ.count_radius())
-    # print(circ.radius)
+    circ = Circle([40.759901, -73.984139], 604221196, 37111525)
+    print('people: ', circ.abs_ofpeople())
+    print('r: ', circ.count_radius())
+
+    circ = Circle([40.759901, -73.984139], 1196, 27111525)
+    print('people: ', circ.abs_ofpeople())
+    print('r: ', circ.count_radius())

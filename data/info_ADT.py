@@ -39,10 +39,11 @@ class Info:
             Return a list of data
         """
 
-    def __init__(self, day, filename=None):
+    def __init__(self, filename=None, day='MON'):
         '''
         Initializing
-        :param filename:
+        :param filename: str
+        :param day: str
         '''
         self.day = day
         self.filename = filename
@@ -59,19 +60,33 @@ class Info:
             self.data_type = 'csv'
 
     def get_data_type(self):
+        '''
+        Return the data type
+        :return: str
+        '''
         return self.data_type
 
     def get_size(self):
+        '''
+        Returns the size of data
+        :return: int
+        '''
         return self.size
 
     def get_source(self):
+        '''
+        Return the name of data source
+        :return: str
+        '''
         return self.source
 
     def txt_read(self, filename, limit=2000):
-        """
-        (str, list) -> list
-        Function read data from txt file
-        """
+        '''
+        Reads data from txt file from url
+        :param filename: str
+        :param limit: int
+        :return: list
+        '''
         # limiter
         chosen_day = self.day
         # chosen_day = 'sunday'
@@ -96,13 +111,6 @@ class Info:
                 curr_el = line.split(',')[2]
                 curr_date = line.split(',')[6]
                 print(line)
-
-                # if counter > 0:
-                #     if curr_st == prev_st:
-                #         if curr_el != prev_el:
-                #             continue
-
-
 
                 if counter > 0:
                     if curr_st != prev_st:
@@ -131,59 +139,14 @@ class Info:
                 prev_date = curr_date
                 counter += 1
 
-
-
-
-
-                # if counter > 0:
-                #     if curr_st != prev_st:
-                #         print('new st')
-                #         day_counter = 0
-                #
-                # if counter > 0:
-                #     if curr_date != prev_date:
-                #         print("new date")
-                #         day_counter += 1
-                #         # self.size -= 1
-                #         # continue
-                #
-                # if day_counter != day_number:
-                #     print("wrong day")
-                #     # day_counter += 1
-                #     # prev_st = curr_st
-                #     # if curr_st != prev_st:
-                #     #     date_counter = 0
-                #     prev_date = curr_date
-                #     # counter += 1
-                #
-                #     # DATA.append(line)
-                #     # self.size += 1
-                #     day_counter += 1
-                #     continue
-                #
-                #
-                #
-                # prev_el = curr_el
-                # prev_st = curr_st
-                # prev_date = curr_date
-                # counter += 1
-                #
-                # # DATA.append(line)
-                # # self.size += 1
-                #
-                # # k += 1
-                # if k == limit:
-                #     break
-
         return DATA
 
-
     def csv_read(self, filename):
-        """
-        (str) -> list
-
-        Function reads from csv file and returns a list
-        """
+        '''
+        Reads info from csv file
+        :param filename: str
+        :return: list
+        '''
         DATA = []
         with open(filename) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
@@ -197,14 +160,23 @@ class Info:
         return DATA
 
     def write(self, filename):
+        '''
+        Writes data into file
+        :param filename: str
+        :return: None
+        '''
         with open(filename, 'w') as file:
             for i in self.data:
                 file.write(i + '\n')
             # file.write(self.data)
         print("data was written")
 
-
     def __add__(self, other):
+        '''
+        Adds csv and txt data, combining them together
+        :param other: object
+        :return: object
+        '''
         txt_data = self.data if self.filename.endswith('txt') else other.data
         csv_data = self.data if self.filename.endswith('csv') else other.data
         DATA = []
@@ -238,14 +210,17 @@ class Info:
         return newInfo
 
     def __str__(self):
-        s = "Contains {} data\nSize: {} lines\nsource: {}".format(self.get_data_type(), self.get_size(), self.get_source())
+        '''
+        str method
+        :return: str
+        '''
+        s = "Contains {} data\nSize: {} lines\nsource: {}".format(self.get_data_type(), self.get_size(),
+                                                                  self.get_source())
         return s
 
 
 if __name__ == "__main__":
     txt_data = Info("http://web.mta.info/developers/" + get_last()[0])
     csv_data = Info("../data/Stations.csv")
-    # print(txt_data)
-    # print(csv_data)
     data = txt_data + csv_data
     data.write('data7.txt')

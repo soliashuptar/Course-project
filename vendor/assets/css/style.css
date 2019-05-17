@@ -47,6 +47,42 @@
   box-sizing: border-box;
 }
 
+#button_uptodate{
+	position: absolute;
+	/*margin-right: 1000px;*/
+	/*margin-right: 1000px;*/
+	margin-left: -450px;
+	margin-top: 50px;
+	/*margin-bottom: 100px;*/
+	/*position: absolute;*/
+	/*right: 0;*/
+	/*left: 0;*/
+	/*bottom: auto;*/
+	/*margin-bottom: 100px;*/
+	/*top: 0;*/
+}
+
+#dots{
+	margin-top: 20px;
+	/*margin-left: 20px;*/
+}
+
+#chooser{
+	/*position: absolute;*/
+	margin-left: 40px;
+}
+
+#last_b{
+	position: absolute;
+	margin-left: 650px;
+
+	/*margin-bottom: 50px;*/
+	/*top: 100px;*/
+	/*bottom: 1004px;*/
+	margin-top: 31px;
+	/*margin-bottom: px;*/
+}
+
 .bg-image {
   /* Full height */
   height: 50%;

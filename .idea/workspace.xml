@@ -3,19 +3,55 @@
   <component name="ChangeListManager">
     <list default="true" id="63774115-5679-474f-9b88-d872f3fe2a4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/air/pollution.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_data.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/get_new_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/get_new_file.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/info_ADT.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/info_ADT.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/json_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/json_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/newdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/newdata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/points_feat.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/points_feat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/unchanged_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/histogram.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/map/folium_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/map/folium_map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/newdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/map/newdata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/newdata.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/map/radius.py" beforeDir="false" afterPath="$PROJECT_DIR$/map/radius.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/render.py" beforeDir="false" afterPath="$PROJECT_DIR$/render.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/my_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_circle.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_circle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_12.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_12.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_13.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_13.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_14.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_14.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_15.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_15.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_15_47.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_15_47.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_16.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_16.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_17.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_17.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_18.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_18.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_19.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_19.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_20.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_20.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_21.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_21.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_22.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_22.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_3_1_44.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_3_1_44.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_3_38.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_3_38.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_9_1_31.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_9_1_31.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/images/nyc_9_50.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/images/nyc_9_50.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.dataTables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.dataTables.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/jquery.dataTables.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/jquery.dataTables.min.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,122 +66,108 @@
     <option name="myElementSize" value="317" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/home_page.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1248">
-                  <caret line="48" selection-start-line="48" selection-end-line="48" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vendor/assets/js/main.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="78">
-                  <caret line="3" column="35" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="35" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/map/folium_map.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="567">
-                  <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-                  <folding>
-                    <element signature="e#0#13#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vendor/assets/css/style.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="312">
-                  <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/README.MD">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor />
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/map/radius.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret selection-end-line="2" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/data/info_ADT.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="570">
-                  <caret line="75" column="29" lean-forward="true" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/my_map.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3250">
-                  <caret line="125" column="29" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/data/data.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="156">
-                  <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/render.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="454">
-                  <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/home_page.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/home_page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1248">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/map/folium_map.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-109">
+              <caret line="47" column="27" lean-forward="true" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/json_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/get_new_file.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_circle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_info.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/data.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/newdata.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/render.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/points_feat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -213,14 +235,15 @@
         <option value="$PROJECT_DIR$/1.py" />
         <option value="$PROJECT_DIR$/data/info_ADT.py" />
         <option value="$PROJECT_DIR$/vendor/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/render.py" />
         <option value="$PROJECT_DIR$/templates/home_page.html" />
+        <option value="$PROJECT_DIR$/render.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="y" value="23" />
+    <option name="width" value="1272" />
+    <option name="height" value="971" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -231,46 +254,23 @@
         <subPane>
           <expand>
             <path>
-              <item name="Курсова_робота" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Курсова_робота" type="462c0819:PsiDirectoryNode" />
+              <item name="CourseProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseProject" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Курсова_робота" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Курсова_робота" type="462c0819:PsiDirectoryNode" />
+              <item name="CourseProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseProject" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Курсова_робота" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Курсова_робота" type="462c0819:PsiDirectoryNode" />
+              <item name="CourseProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseProject" type="462c0819:PsiDirectoryNode" />
               <item name="map" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Курсова_робота" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Курсова_робота" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Курсова_робота" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Курсова_робота" type="462c0819:PsiDirectoryNode" />
+              <item name="CourseProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseProject" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Курсова_робота" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Курсова_робота" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Курсова_робота" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Курсова_робота" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Курсова_робота" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Курсова_робота" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -283,7 +283,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/map" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -456,7 +456,9 @@
       <workItem from="1557843485180" duration="7579000" />
       <workItem from="1557866809495" duration="5872000" />
       <workItem from="1557926877949" duration="25035000" />
-      <workItem from="1558085422011" duration="1480000" />
+      <workItem from="1558085422011" duration="2074000" />
+      <workItem from="1558102695347" duration="559000" />
+      <workItem from="1558121812302" duration="230000" />
     </task>
     <servers />
   </component>
@@ -487,13 +489,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87432000" />
+    <option name="totallyTimeSpent" value="88815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49833888" visible="true" weight="0.1916972" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49833888" visible="true" weight="0.1965812" />
       <window_info id="Structure" order="1" sideWeight="0.5016611" side_tool="true" weight="0.25579977" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -507,7 +509,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29564315" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29564315" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32987553" />
       <window_info anchor="bottom" id="Floobits" order="13" weight="0.32987553" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -530,19 +532,6 @@
     <SUITE FILE_PATH="coverage/_$read_files.coverage" NAME="read_files Coverage Results" MODIFIED="1557499364826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/histogram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/nyc_6.jpg" />
     <entry file="file://$PROJECT_DIR$/assets/nyc_5.jpg" />
     <entry file="file://$PROJECT_DIR$/assets/nyc_3_38.jpg" />
@@ -559,13 +548,7 @@
     <entry file="file://$PROJECT_DIR$/assets/nyc_9_50.jpg" />
     <entry file="file://$PROJECT_DIR$/assets/nyc_9_1_31.jpg" />
     <entry file="file://$PROJECT_DIR$/assets/nyc_9.jpg" />
-    <entry file="file://$PROJECT_DIR$/api_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="36" selection-start-line="36" selection-end-line="42" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/api_data.py" />
     <entry file="file://$PROJECT_DIR$/assets/nyc_8.png" />
     <entry file="file://$PROJECT_DIR$/assets/nyc_7.jpg" />
     <entry file="file://$PROJECT_DIR$/assets/nyc_4.jpg" />
@@ -587,13 +570,7 @@
     <entry file="file://$PROJECT_DIR$/diagram_ADT.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/air/pollution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="143" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/air/pollution.py" />
     <entry file="file://$PROJECT_DIR$/map/unchanged.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -601,13 +578,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/unchanged_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/unchanged_data.py" />
     <entry file="file://$PROJECT_DIR$/data/try.py" />
     <entry file="file://$PROJECT_DIR$/data/Stations.csv">
       <provider selected="true" editor-type-id="text-editor">
@@ -616,48 +587,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map/newdata.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="123" lean-forward="true" selection-start-column="123" selection-end-column="146" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/map/newdata.json" />
     <entry file="file://$PROJECT_DIR$/map/render.py" />
-    <entry file="file://$PROJECT_DIR$/data/get_new_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/json_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/newdata.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-130040">
-          <caret line="146" column="19" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/points_feat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data.txt" />
     <entry file="file://$PROJECT_DIR$/1.py" />
     <entry file="file://$PROJECT_DIR$/vendor/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -684,7 +616,17 @@
     <entry file="file://$PROJECT_DIR$/map/radius.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="2" selection-end-column="21" />
+          <caret selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/info_ADT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5434">
+          <caret line="213" column="18" selection-start-line="213" selection-start-column="18" selection-end-line="213" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -695,6 +637,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/newdata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/render.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/data.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -702,37 +665,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/info_ADT.py">
+    <entry file="file://$PROJECT_DIR$/data/points_feat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="75" column="29" lean-forward="true" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+        <state relative-caret-position="250">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_circle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/map/folium_map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+        <state relative-caret-position="-109">
+          <caret line="47" column="27" lean-forward="true" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/render.py">
+    <entry file="file://$PROJECT_DIR$/data/json_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="457">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home_page.html">
+    <entry file="file://$PROJECT_DIR$/data/get_new_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        <state relative-caret-position="26">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
