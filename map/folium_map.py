@@ -57,21 +57,21 @@ plugins.TimestampedGeoJson(
             'type': 'FeatureCollection',
             'features': features
         }
-        , period='P1D'
+        , period='PT4H'
         , add_last_point=True
-        , auto_play=True
-        , loop=True
-        , max_speed=0.5
-        , loop_button=True
-        , date_options='YYYY/MM//DD'
-        , time_slider_drag_update=True,
-        duration='P{}D'.format(json_data.DURATION)
+        # , auto_play=True
+        # , loop=True
+        # , max_speed=0.5
+        # , loop_button=True
+        # , date_options='YYYY/MM//DD'
+        # , time_slider_drag_update=True,
+        # duration='P{}D'.format(json_data.DURATION)
     ).add_to(folium_map)
 
 folium_map.add_child(folium.LayerControl())
 
-heatmap = plugins.HeatMap(data=[[40.738, -73.98], [40.641362, -74.017881]])
-folium_map.add_child(heatmap)
+# heatmap = plugins.HeatMap(data=[[40.738, -73.98], [40.641362, -74.017881]])
+# folium_map.add_child(heatmap)
 
 print('> Done.')
 folium_map.save("../templates/my_map.html")

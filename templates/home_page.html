@@ -15,11 +15,18 @@
 <div class="bg-image img6"></div>
 
 <div class="bg-text">New York Map</div>
-<!--<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>-->
-<!--<button class ="btn" formaction="/uptodatemap" formmethod="post">Generate map with up-to-date data</button>-->
-<!--<button class ="btn_2" formaction="/generatedmap" formmethod="post">Generate map with last refreshed data</button>-->
-<form action = "/uptodatemap" method="post">
-<button class="btn" id="button_uptodate">Generate map with up-to-date data</button>
+<form action="/uptodatemap" method="post">
+Choose a day
+<input name="day" type="radio" value="MON">MON
+<input name="day" type="radio" value="TUE">TUE
+<input name="day" type="radio" value="WED">WED
+<input name="day" type="radio" value="THU">THU
+<input name="day" type="radio" value="FRI">FRI
+<input name="day" type="radio" value="SAT">SAT
+<input name="day" type="radio" value="SUN">SUN
+<!--</form>-->
+<!--<form action = "/uptodatemap" method="post">-->
+<input class="btn" type="submit" id="button_uptodate">Generate map with up-to-date data</input>
      </form>
 <!--<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>-->
 <div class="windows8">
@@ -39,6 +46,7 @@
 		<div class="wInnerBall"></div>
 	</div>
 </div>
+
 <form action="/generatedmap" method="post">
 <button class="btn_2">Generate map with last refreshed data</button>
      </form>

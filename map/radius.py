@@ -1,4 +1,9 @@
-from unchanged import *
+import sys
+
+sys.path.append("..")
+
+
+from map.unchanged import *
 
 
 class Circle:

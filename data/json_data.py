@@ -29,8 +29,11 @@ DATA = {
     'info': []
 }
 
-for i in range(200):
-    DATA['info'].append(next(data_gen))
+while True:
+    try:
+        DATA['info'].append(next(data_gen))
+    except IndexError:
+        break
 
 # DATA['info'].sort(key=lambda x: x['date'])
 # print(DATA)
