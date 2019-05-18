@@ -46,7 +46,7 @@ Project structure
 
 Video presentation
 ======
-[Click here](https://www.youtube.com/watch?v=s1UrBzjxyYM&feature=youtu.be)
+[Click here](https://youtu.be/PO1QPNkAJqo)
 
 More detailed info
 ======
