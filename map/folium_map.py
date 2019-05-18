@@ -1,6 +1,7 @@
 import folium
 from folium import plugins
 import sys
+
 sys.path.append("..")
 
 from data import points_feat
@@ -15,6 +16,7 @@ def create_map():
     Function creates a map and saves it to templates folder
     :return:
     """
+
     points = points_feat.create_points(flask_path)
     FEATURES = points['features']
     points_COORDINATES = points['coordinates']
@@ -44,16 +46,16 @@ def create_map():
 
         }
         , period='PT4H'
-        , add_last_point= True
-        , duration = 'PT1M'
+        , add_last_point=True
+        , duration='PT1M'
     ).add_to(folium_map)
 
     coordinates = []
     for c in points_COORDINATES:
         newlst = [c[1], c[0]]
-        aqi = pollution.get_air_data(newlst, DEF_TIME)[0] / 2.5
-        newlst.append(aqi)
-        coordinates.append(newlst)
+    aqi = pollution.get_air_data(newlst, DEF_TIME)[0] / 2.5
+    newlst.append(aqi)
+    coordinates.append(newlst)
 
     heat_map = plugins.HeatMap(coordinates, radius=50)
     heat_map.layer_name = 'Air Quality'

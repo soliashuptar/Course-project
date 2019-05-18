@@ -87,13 +87,10 @@ class Info:
         :param limit: int
         :return: list
         '''
-        # limiter
         chosen_day = self.day
-        # chosen_day = 'sunday'
         k = 0
         days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
         day_number = days.index(chosen_day)
-        # print('dn', day_number)
 
         counter = 0
         day_counter = 0
@@ -104,42 +101,44 @@ class Info:
             for b in webpage:
                 if k == limit:
                     break
-                # print(day_counter)
                 line = b.strip()
                 line = line.decode("utf-8")
                 curr_st = line.split(',')[3]
                 curr_el = line.split(',')[2]
                 curr_date = line.split(',')[6]
-                print(line)
+                # print(line)
 
                 if counter > 0:
                     if curr_st != prev_st:
                         day_counter = -1
-                        print('new st: ', curr_st)
+                        # print('new st: ', curr_st)
 
                 if counter > 0:
                     if curr_date != prev_date:
-                        print('new day')
+                        # print('new day')
                         day_counter += 1
-                        print('day_counter: ', day_counter)
+                        # print('day_counter: ', day_counter)
 
                 if day_counter == day_number:
-                    print('adding')
-                    print("day counter: ", day_counter)
-                    print(curr_date)
+                    # print('adding')
+                    # print("day counter: ", day_counter)
+                    # print(curr_date)
                     DATA.append(line)
                     self.size += 1
                     k += 1
+                    counter += 1
                     prev_date = curr_date
                     prev_st = curr_st
                     continue
 
+                counter += 1
                 prev_el = curr_el
                 prev_st = curr_st
                 prev_date = curr_date
-                counter += 1
+
 
         return DATA
+
 
     def csv_read(self, filename):
         '''
@@ -170,6 +169,7 @@ class Info:
                 file.write(i + '\n')
             # file.write(self.data)
         print("data was written")
+
 
     def __add__(self, other):
         '''
@@ -214,13 +214,14 @@ class Info:
         str method
         :return: str
         '''
-        s = "Contains {} data\nSize: {} lines\nsource: {}".format(self.get_data_type(), self.get_size(),
-                                                                  self.get_source())
+        s = "Contains {} data\nSize: {} lines\nsource: {}".format(self.get_data_type(), self.get_size(), self.get_source())
         return s
 
 
 if __name__ == "__main__":
-    txt_data = Info("http://web.mta.info/developers/" + get_last()[0])
+    txt_data = Info("http://web.mta.info/developers/" + get_last()[0], 'MON')
+    # txt_data = Info("http://web.mta.info/developers/" + get_last()[0], 'SUN')
+    # txt_data = Info("http://web.mta.info/developers/" + get_last()[0], 'FRI')
     csv_data = Info("../data/Stations.csv")
     data = txt_data + csv_data
-    data.write('data7.txt')
+    data.write('data_test.txt')
