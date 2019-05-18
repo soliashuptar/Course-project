@@ -9,6 +9,6 @@ def get_info_with_last(day):
     :return: None
     '''
     txt_data = Info("http://web.mta.info/developers/" + get_last()[0], day)
-    csv_data = Info("../CourseProject/data/Stations.csv")
+    csv_data = Info("data/Stations.csv")
     data = txt_data + csv_data
-    data.write('../CourseProject/data/data.txt')
+    data.write('data/data.txt')

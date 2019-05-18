@@ -10,7 +10,7 @@ def read_data(filename):
     with open(filename, 'r') as file:
         for line in file:
             line = line.strip().split(',')
-            print(line)
+            # print(line)
             try:
                 info = {
                     'station': line[3],
@@ -21,6 +21,7 @@ def read_data(filename):
                     'coords': [float(line[11]), float(line[12])]
                 }
             except:
+                print("something happened")
                 continue
             yield info
 
@@ -36,7 +37,7 @@ def write_data(filename, data):
         json.dump(data, file)
 
 
-def to_json(outfile, infile, times=200):
+def to_json(outfile, infile, times=600):
     '''
     Function for converting txt data into json
     :param outfile: str
@@ -57,10 +58,9 @@ def to_json(outfile, infile, times=200):
     DATA['info'].sort(key=lambda x: x['date'])
     write_data(infile, DATA)
     print("data was converted")
-    # print(DATA)
 
 
-def get_duration(outfile, times=200):
+def get_duration(outfile, times=600):
     '''
     Function for getting the total number of days
     :param outfile: str
@@ -84,4 +84,4 @@ def get_duration(outfile, times=200):
 
 
 if __name__ == "__main__":
-    to_json('../data/data.txt', '../data/newdata.json', 800)
+    to_json('../data/data.txt', '../data/newdata.json', 300)

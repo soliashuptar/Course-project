@@ -1,52 +1,62 @@
 import json
 import sys
-
 sys.path.append("..")
 from map.radius import Circle
 
 
-# '../data/newdata.json'
 def load_data(filename):
-    """Function loads data from json"""
+    '''
+    Loading data from file into dct
+    :param filename: str
+    :return: dict
+    '''
     with open(filename, 'r') as f:
         JSON_DATA = json.load(f)
         return JSON_DATA['info']
 
 
 def create_points(filename):
-    """
-    Function which creates points with scroller on a map
-    :param filename:
+    '''
+    Creating points with station coordinates and other data that will be shown on the map
+    :param filename: str
     :return: dict
-    """
+    '''
+
     DATA = load_data(filename)
 
     points = []
-    # 2019/08.05
     for info in DATA:
+
+        date = info['date'].split('/')
+        year = date[2]
+        month = date[0]
+        day = date[1]
+        date = year + '-' + month + '-' + day
+
         dct = {
             'station': info['station'],
-            'time': '-'.join(info['date'].split('/')[::-1]) + "T" + info['time'],
+            'time': date + "T" + info['time'],
+            # 'time': info['time'],
             'popup': 'Station: {}'.format(info['station']),
             'coordinates': [info['coords'][1], info['coords'][0]],
             'entrances': info['entrances'],
             'exits': info['exits']
         }
-
+        # print(dct)
         points.append(dct)
 
+
     features = []
-    coordinates = []
+    COORDINATES = []
 
     for point in points:
         stat = point['station']
-        # print(point['time'])
         time = point['time']
-        print(time)
+        # print(time)
         coords = point['coordinates']
 
-        if coords not in coordinates:
-            coordinates.append(coords)
+        if coords not in COORDINATES:
+            COORDINATES.append(coords)
 
         entr = point['entrances']
         exits = point['exits']
@@ -61,28 +71,36 @@ def create_points(filename):
         elif radius <= 50:
             color = '#f04822'  # orange
         dct = {
-            'type': 'Feature',
-            'geometry': {
-                'type': 'MultiPoint',
-                'coordinates': [coords],
-            },
-            'properties': {
-                'times': [time],
-                'popup': popup,
-                'icon': 'circle',
-                'iconstyle': {
-                    'fillColor': color,
-                    'fillOpacity': 0.15,
-                    'stroke': 'false',
-                    'radius': radius
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'MultiPoint',
+                    'coordinates': [coords],
+                },
+                'properties': {
+                    'times': [time],
+                    'popup': popup,
+                    'icon': 'circle',
+                    'iconstyle': {
+                        'fillColor': color,
+                        'fillOpacity': 0.15,
+                        'stroke': 'false',
+                        'radius': radius
+                        }
                 }
             }
-        }
 
         features.append(dct)
 
-    def_time = time
-    # print(features)
+    DEF_TIME = time
+
+    def change_date(given):
+        date = given.split('/')
+        year = date[2]
+        month = date[0]
+        day = date[1]
+        date = year + '-' + month + '-' + day
+        return date
+
     features.append(
         {
             'type': 'Feature',
@@ -94,7 +112,8 @@ def create_points(filename):
             },
             'properties': {
                 'popup': 'Current address',
-                'times': sorted(list(set(['-'.join(info['date'].split('/')[::-1]) + "T" + info['time']]))),
+                'times': sorted(set([change_date(info['date']) + "T" + info['time'] for info in DATA])),
+                # 'times': sorted(set([info['time'] for info in DATA])),
                 'icon': 'circle',
                 'iconstyle': {
                     'fillColor': 'green',
@@ -107,9 +126,10 @@ def create_points(filename):
             }
         }
     )
+
     result = {
         'features': features,
-        'coordinates': coordinates,
-        'set-time': def_time
+        'coordinates': COORDINATES,
+        'set-time': DEF_TIME
     }
     return result

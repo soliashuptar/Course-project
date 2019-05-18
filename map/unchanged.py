@@ -1,3 +1,6 @@
+# unchanged data used in other modules
+
+
 URL = 'http://web.mta.info/developers/turnstile.html'
 START_STR = 'data/nyct/turnstile/turnstile_'
 MANHATTAN = ([40.695089, -74.028804], [40.878034, -73.925106])

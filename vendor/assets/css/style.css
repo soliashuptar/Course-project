@@ -93,6 +93,31 @@
   background-size: cover;
 }
 
+
+/*#arr1{*/
+	/*width: 10%;*/
+	/*height: 20%;*/
+	/*position: fixed;*/
+	/*top: 5%;*/
+  	/*left: 5%;*/
+/*}*/
+
+/*#arr2{*/
+	/*width: 10%;*/
+	/*height: 20%;*/
+	/*position: fixed;*/
+	/*top: 5%;*/
+  	/*left: 83%;*/
+/*}*/
+
+#scroll{
+	width: 6%;
+	height: 12%;
+	position: fixed;
+	top: 51%;
+  	left: 37%;
+}
+
 /* Images used */
 .img1 { background-image: url("/vendor/assets/images/nyc_16.jpeg"); }
 .img2 { background-image: url("/vendor/assets/images/nyc_18.jpeg"); }

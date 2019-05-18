@@ -1,24 +1,25 @@
 import folium
 from folium import plugins
-import sys
 
+import sys
 sys.path.append("..")
 
 from data import points_feat
 from data import pollution
 
-main_path = '../data/newdata.json'
-flask_path = '../CourseProject/data/newdata.json'
-
+main_path = 'data/newdata.json'
+flask_path = 'data/newdata.json'
 
 def create_map():
-    """
-    Function creates a map and saves it to templates folder
-    :return:
-    """
+    '''
+    Function for creating a map
+    :return: None
+    '''
 
     points = points_feat.create_points(flask_path)
+    # points = points_feat.create_points(main_path)
     FEATURES = points['features']
+    # print(FEATURES)
     points_COORDINATES = points['coordinates']
     DEF_TIME = points['set-time']
 
@@ -40,31 +41,31 @@ def create_map():
 
     # Timestamp plugin
     plugins.TimestampedGeoJson(
-        {
-            'type': 'FeatureCollection',
-            'features': FEATURES,
+            {
+                'type': 'FeatureCollection',
+                'features': FEATURES
+            }
+            , period='PT4H'
+            , add_last_point=True
+        ).add_to(folium_map)
 
-        }
-        , period='PT4H'
-        , add_last_point=True
-        , duration='PT1M'
-    ).add_to(folium_map)
-
-    coordinates = []
+    COORDINATES = []
     for c in points_COORDINATES:
         newlst = [c[1], c[0]]
-    aqi = pollution.get_air_data(newlst, DEF_TIME)[0] / 2.5
-    newlst.append(aqi)
-    coordinates.append(newlst)
+        aqi = pollution.get_air_data(newlst, DEF_TIME)[0] / 2.5
+        newlst.append(aqi)
+        COORDINATES.append(newlst)
+    # print(COORDINATES)
 
-    heat_map = plugins.HeatMap(coordinates, radius=50)
+    heat_map = plugins.HeatMap(COORDINATES, radius=50)
     heat_map.layer_name = 'Air Quality'
     folium_map.add_child(heat_map)
+
 
     folium_map.add_child(folium.LayerControl())
 
     print('> Done.')
-    folium_map.save("../CourseProject/templates/my_map.html")
+    folium_map.save("templates/my_map.html")
 
 
 if __name__ == "__main__":

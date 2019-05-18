@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>data package &#8212; CourseProject 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="data-package">
+<h1>data package<a class="headerlink" href="#data-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-data.get_new_file">
+<span id="data-get-new-file-module"></span><h2>data.get_new_file module<a class="headerlink" href="#module-data.get_new_file" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="data.get_new_file.get_last">
+<code class="descclassname">data.get_new_file.</code><code class="descname">get_last</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data.get_new_file.get_last" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that loads the last uploaded file with data from the website
+:return: list</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.info">
+<span id="data-info-module"></span><h2>data.info module<a class="headerlink" href="#module-data.info" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="data.info.get_info_with_last">
+<code class="descclassname">data.info.</code><code class="descname">get_info_with_last</code><span class="sig-paren">(</span><em>day</em><span class="sig-paren">)</span><a class="headerlink" href="#data.info.get_info_with_last" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the latest data from url and csv file and write it into a file
+:return: None</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.info_ADT">
+<span id="data-info-adt-module"></span><h2>data.info_ADT module<a class="headerlink" href="#module-data.info_ADT" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="data.info_ADT.Info">
+<em class="property">class </em><code class="descclassname">data.info_ADT.</code><code class="descname">Info</code><span class="sig-paren">(</span><em>filename=None</em>, <em>day='MON'</em><span class="sig-paren">)</span><a class="headerlink" href="#data.info_ADT.Info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent information</p>
+<p>…</p>
+<dl class="simple">
+<dt>filename<span class="classifier">str</span></dt><dd><p>a string representing the filename from which information is taken</p>
+</dd>
+<dt>day: str</dt><dd><p>a string representing the day</p>
+</dd>
+<dt>size<span class="classifier">int</span></dt><dd><p>the size of an Info object</p>
+</dd>
+<dt>data_type<span class="classifier">str</span></dt><dd><p>a string representing the type of data current object contains</p>
+</dd>
+<dt>source<span class="classifier">str</span></dt><dd><p>string representing source of the information</p>
+</dd>
+<dt>data<span class="classifier">list</span></dt><dd><p>list containing data</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>get_data_type()</dt><dd><p>Returns the data type attribute</p>
+</dd>
+<dt>get_size()</dt><dd><p>Returns the size attribute</p>
+</dd>
+<dt>get_source()</dt><dd><p>Returns the source attribute</p>
+</dd>
+<dt>txt_read(filename)</dt><dd><p>Reads data from a file or url, formating it and converting into lst
+Return a list of data</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="data.info_ADT.Info.csv_read">
+<code class="descname">csv_read</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#data.info_ADT.Info.csv_read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads info from csv file
+:param filename: str
+:return: list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.info_ADT.Info.get_data_type">
+<code class="descname">get_data_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data.info_ADT.Info.get_data_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the data type
+:return: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.info_ADT.Info.get_size">
+<code class="descname">get_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data.info_ADT.Info.get_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size of data
+:return: int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.info_ADT.Info.get_source">
+<code class="descname">get_source</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data.info_ADT.Info.get_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the name of data source
+:return: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.info_ADT.Info.txt_read">
+<code class="descname">txt_read</code><span class="sig-paren">(</span><em>filename</em>, <em>limit=2000</em><span class="sig-paren">)</span><a class="headerlink" href="#data.info_ADT.Info.txt_read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads data from txt file from url
+:param filename: str
+:param limit: int
+:return: list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.info_ADT.Info.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#data.info_ADT.Info.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes data into file
+:param filename: str
+:return: None</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.json_data">
+<span id="data-json-data-module"></span><h2>data.json_data module<a class="headerlink" href="#module-data.json_data" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="data.json_data.get_duration">
+<code class="descclassname">data.json_data.</code><code class="descname">get_duration</code><span class="sig-paren">(</span><em>outfile</em>, <em>times=200</em><span class="sig-paren">)</span><a class="headerlink" href="#data.json_data.get_duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for getting the total number of days
+:param outfile: str
+:param times: int</p>
+<blockquote>
+<div><p>a limiter dedicating how many points will be added to json</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.json_data.read_data">
+<code class="descclassname">data.json_data.</code><code class="descname">read_data</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#data.json_data.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generator type function for reading data from file
+:param filename: str
+:return: dict</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.json_data.to_json">
+<code class="descclassname">data.json_data.</code><code class="descname">to_json</code><span class="sig-paren">(</span><em>outfile</em>, <em>infile</em>, <em>times=200</em><span class="sig-paren">)</span><a class="headerlink" href="#data.json_data.to_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for converting txt data into json
+:param outfile: str
+:param infile: str
+:param times: int</p>
+<blockquote>
+<div><p>a limiter dedicating how many points will be added to json</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.json_data.write_data">
+<code class="descclassname">data.json_data.</code><code class="descname">write_data</code><span class="sig-paren">(</span><em>filename</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#data.json_data.write_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for writing data into json file
+:param filename: str
+:param data: str
+:return: None</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.points_feat">
+<span id="data-points-feat-module"></span><h2>data.points_feat module<a class="headerlink" href="#module-data.points_feat" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="data.points_feat.create_points">
+<code class="descclassname">data.points_feat.</code><code class="descname">create_points</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#data.points_feat.create_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function which creates points with scroller on a map
+:param filename:
+:return: dict</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.points_feat.load_data">
+<code class="descclassname">data.points_feat.</code><code class="descname">load_data</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#data.points_feat.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function loads data from json</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.pollution">
+<span id="data-pollution-module"></span><h2>data.pollution module<a class="headerlink" href="#module-data.pollution" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="data.pollution.get_air_data">
+<code class="descclassname">data.pollution.</code><code class="descname">get_air_data</code><span class="sig-paren">(</span><em>coords</em>, <em>date</em><span class="sig-paren">)</span><a class="headerlink" href="#data.pollution.get_air_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets data on air pollution, returns aqi (air quality index)
+:param coords: list
+:param date: str
+:return: int</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-data" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">CourseProject</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Solomiya.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/data.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

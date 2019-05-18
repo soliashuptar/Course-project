@@ -13,6 +13,8 @@ class Info:
 
         Attributes
         ----------
+        limit: int
+            a number representing how many lines will be read from txt file
         filename : str
             a string representing the filename from which information is taken
         day: str
@@ -39,12 +41,13 @@ class Info:
             Return a list of data
         """
 
-    def __init__(self, filename=None, day='MON'):
+    def __init__(self, filename=None, day='MON', limit=2000):
         '''
         Initializing
         :param filename: str
         :param day: str
         '''
+        self.limit = limit
         self.day = day
         self.filename = filename
         self.size = 0
@@ -80,7 +83,7 @@ class Info:
         '''
         return self.source
 
-    def txt_read(self, filename, limit=2000):
+    def txt_read(self, filename):
         '''
         Reads data from txt file from url
         :param filename: str
@@ -99,7 +102,7 @@ class Info:
         with urllib.request.urlopen(filename, context=context) as webpage:
             webpage.readline()
             for b in webpage:
-                if k == limit:
+                if k == self.limit:
                     break
                 line = b.strip()
                 line = line.decode("utf-8")
