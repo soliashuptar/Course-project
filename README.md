@@ -15,6 +15,8 @@ Web-app
 ======
 [Click here](http://vladbilyk.pythonanywhere.com/)
 
+Note: The web-app isn't fully working, only the old map can be generated due to the free account restrictions. You can generate the new map by yourself after cloning the repo and running `render.py` which is a flask app
+
 Project structure
 ======
 
